@@ -52,7 +52,7 @@ The STAGE deploy pipeline requires the image tag that you want to deploy into ST
 
     ```
     $ oc new-project demo
-    $ git clone https://github.com/siamaksade/tekton-cd-demo
+    $ git clone https://github.com/nreilly-rhn/tekton-cd-demo
     $ demo.sh install
     ```
 
