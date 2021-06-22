@@ -69,6 +69,15 @@ EOF
 command.install() {
   oc version >/dev/null 2>&1 || err "no oc binary found"
 
+  oc apply -f config/openshift-pipelines-operator-subscription.yaml
+
+  until oc api-resources --api-group=tekton.dev | grep tekton.dev &> /dev/null
+  do 
+   echo "Operator installation in progress..."
+   sleep 5
+  done
+  echo "Operator ready"
+
   info "Creating namespaces $cicd_prj, $dev_prj, $stage_prj"
   oc get ns $cicd_prj 2>/dev/null  || { 
     oc new-project $cicd_prj 
