@@ -25,6 +25,11 @@ spec:
       - name: sonarqube
         imagePullPolicy: Always
         image: quay.io/siamaksade/sonarqube:8.3-community
+        env:
+        - name: HTTP_PROXY
+          value: "http://proxy.nreilly.tamapac.support:3128"
+        - name: HTTPS_PROXY
+          value: "http://proxy.nreilly.tamapac.support:3128"
         ports:
         - containerPort: 9000
           protocol: TCP
