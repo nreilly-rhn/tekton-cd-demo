@@ -22,12 +22,12 @@ spec:
       - name: nexus
         image: quay.io/siamaksade/nexus3:3.16.2
         env:
-        - name: HTTP_PROXY
-          value: "http://proxy.nreilly.tamapac.support:3128"
-        - name: HTTPS_PROXY
-          value: "http://proxy.nreilly.tamapac.support:3128"
-        - name: CONTEXT_PATH
-          value: /
+          - name: HTTP_PROXY
+            value: "http://proxy.nreilly.tamapac.support:3128"
+          - name: HTTPS_PROXY
+            value: "http://proxy.nreilly.tamapac.support:3128"
+          - name: CONTEXT_PATH
+            value: /
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8081
