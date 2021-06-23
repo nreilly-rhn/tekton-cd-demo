@@ -25,10 +25,10 @@ spec:
         image: quay.io/chmouel/go-simple-uploader:latest
         imagePullPolicy: IfNotPresent
         env:
-        - name: HTTP_PROXY
-          value: "http://proxy.nreilly.tamapac.support:3128"
-        - name: HTTPS_PROXY
-          value: "http://proxy.nreilly.tamapac.support:3128"
+          - name: HTTP_PROXY
+            value: "http://proxy.nreilly.tamapac.support:3128"
+          - name: HTTPS_PROXY
+            value: "http://proxy.nreilly.tamapac.support:3128"
           - name: UPLOADER_PORT
             value: "9000"
           - name: UPLOADER_DIRECTORY
