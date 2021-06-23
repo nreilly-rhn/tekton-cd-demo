@@ -6,6 +6,24 @@ data:
   settings.xml: |
     <?xml version="1.0" encoding="UTF-8"?>
     <settings>
+    <proxies>
+      <proxy>
+        <id>http</id>
+        <active>true</active>
+        <protocol>http</protocol>
+        <host>proxy.nreilly.tamapac.support</host>
+        <port>3128</port>
+        <nonProxyHosts>local.net</nonProxyHosts>
+      </proxy>
+      <proxy>
+        <id>https</id>
+        <active>true</active>
+        <protocol>https</protocol>
+        <host>proxy.nreilly.tamapac.support</host>
+        <port>3128</port>
+        <nonProxyHosts>local.net</nonProxyHosts>
+      </proxy>
+    </proxies>
       <servers>
         <server>
           <id>nexus</id>
