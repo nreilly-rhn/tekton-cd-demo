@@ -30,7 +30,7 @@ spec:
           - name: HTTPS_PROXY
             value: "http://proxy.nreilly.tamapac.support:3128"
           - name: NO_PROXY
-            value: "nexus,sonarqube,.nreilly.tamapac.support,.apps.nreilly.tamapac.support"
+            value: "nexus,sonarqube"
           - name: UPLOADER_PORT
             value: "9000"
           - name: UPLOADER_DIRECTORY

@@ -27,7 +27,7 @@ spec:
           - name: HTTPS_PROXY
             value: "http://proxy.nreilly.tamapac.support:3128"
           - name: NO_PROXY
-            value: "nexus,sonarqube,.nreilly.tamapac.support,.apps.nreilly.tamapac.support"
+            value: "nexus,sonarqube"
           - name: CONTEXT_PATH
             value: /
         imagePullPolicy: IfNotPresent
