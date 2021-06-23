@@ -13,7 +13,7 @@ data:
         <protocol>http</protocol>
         <host>proxy.nreilly.tamapac.support</host>
         <port>3128</port>
-        <nonProxyHosts>local.net</nonProxyHosts>
+        <nonProxyHosts>nexus,.nreilly.tamapac.support,.apps.nreilly.tamapac.support</nonProxyHosts>
       </proxy>
       <proxy>
         <id>https</id>
@@ -21,7 +21,7 @@ data:
         <protocol>https</protocol>
         <host>proxy.nreilly.tamapac.support</host>
         <port>3128</port>
-        <nonProxyHosts>local.net</nonProxyHosts>
+        <nonProxyHosts>nexus,.nreilly.tamapac.support,.apps.nreilly.tamapac.support</nonProxyHosts>
       </proxy>
     </proxies>
       <servers>
