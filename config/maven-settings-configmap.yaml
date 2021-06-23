@@ -13,7 +13,7 @@ data:
         <protocol>http</protocol>
         <host>proxy.nreilly.tamapac.support</host>
         <port>3128</port>
-        <nonProxyHosts>nexus</nonProxyHosts>
+        <nonProxyHosts>nexus,sonarqube</nonProxyHosts>
       </proxy>
       <proxy>
         <id>https</id>
@@ -21,7 +21,7 @@ data:
         <protocol>https</protocol>
         <host>proxy.nreilly.tamapac.support</host>
         <port>3128</port>
-        <nonProxyHosts>nexus</nonProxyHosts>
+        <nonProxyHosts>nexus,sonarqube</nonProxyHosts>
       </proxy>
     </proxies>
       <servers>
