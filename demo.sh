@@ -71,7 +71,7 @@ command.install() {
 
   oc apply -f config/openshift-pipelines-operator-subscription.yaml
 
-  until oc api-resources --api-group=tekton.dev | grep tekton.dev &> /dev/null
+  until oc api-resources --api-group=triggers.tekton.dev | grep TriggerBinding &> /dev/null
   do 
    echo "Operator installation in progress..."
    sleep 5
