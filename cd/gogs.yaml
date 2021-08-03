@@ -109,11 +109,6 @@ spec:
       - name: gogs
         imagePullPolicy: Always
         image: quay.io/siamaksade/gogs:stable
-        env:
-        - name: HTTP_PROXY
-          value: "http://proxy.nreilly.tamapac.support:3128"
-        - name: HTTPS_PROXY
-          value: "http://proxy.nreilly.tamapac.support:3128"
         ports:
         - containerPort: 3000
           protocol: TCP
