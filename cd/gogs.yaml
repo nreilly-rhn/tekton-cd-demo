@@ -69,7 +69,7 @@ spec:
           claimName: gogs-postgres-data
 ---
 kind: Service
-apiVersion: v1
+apiVersion: core/v1
 metadata:
   name: gogs-postgresql
   labels:
@@ -149,7 +149,7 @@ spec:
               path: app.ini
 ---
 kind: Service
-apiVersion: v1
+apiVersion: core/v1
 metadata:
   labels:
     app: gogs
@@ -177,7 +177,7 @@ spec:
     name: gogs
 ---
 kind: PersistentVolumeClaim
-apiVersion: v1
+apiVersion: core/v1
 metadata:
   name: gogs-data
   labels:
@@ -190,7 +190,7 @@ spec:
       storage: 1Gi
 --- 
 kind: PersistentVolumeClaim
-apiVersion: v1
+apiVersion: core/v1
 metadata:
   name: gogs-postgres-data
   labels:
