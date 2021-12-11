@@ -12,7 +12,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain 
 ---
-apiVersion: v1
+apiVersion: core/v1
 kind: PersistentVolumeClaim
 metadata:
   name: petclinic-stage-workspace
