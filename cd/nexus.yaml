@@ -64,7 +64,7 @@ spec:
         persistentVolumeClaim:
           claimName: nexus-pv
 ---
-apiVersion: core/v1
+apiVersion: v1
 kind: Service
 metadata:
   labels:
@@ -95,7 +95,7 @@ spec:
     name: nexus
     weight: 100
 ---
-apiVersion: core/v1
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   labels:
