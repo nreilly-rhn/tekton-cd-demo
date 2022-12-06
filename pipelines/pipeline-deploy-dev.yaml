@@ -120,6 +120,7 @@ spec:
   - name: build-image
     taskRef:
       name: s2i-java
+      kind: ClusterTask
     runAfter:
     - release-app
     params:
