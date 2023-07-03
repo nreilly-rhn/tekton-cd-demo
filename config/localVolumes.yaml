@@ -1,0 +1,135 @@
+
+apiVersion: "local.storage.openshift.io/v1"
+kind: "LocalVolume"
+metadata:
+  name: "local-disks"
+  namespace: "openshift-local-storage" 
+spec:
+  storageClassDevices:
+    - storageClassName: "gogs-data"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdb
+    - storageClassName: "gogs-postgres-data"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdc
+    - storageClassName: "nexus-pv"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdd
+    - storageClassName: "reports-repo-pv"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vde
+    - storageClassName: "petclinic-dev-workspace"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdf
+    - storageClassName: "petclinic-stage-workspace"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdg
+    - storageClassName: "mtr-postgresql"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdh
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: gogs-data
+  labels:
+    app: gogs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: gogs-postgres-data
+  labels:
+    app: gogs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: nexus
+  name: nexus-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: reports-repo
+  name: reports-repo-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: petclinic-dev-workspace
+spec:
+  resources:
+    requests:
+      storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: petclinic-stage-workspace
+spec:
+  resources:
+    requests:
+      storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+---
+apiVersion: "local.storage.openshift.io/v1"
+kind: "LocalVolume"
+metadata:
+  name: "local-disks"
+  namespace: "openshift-local-storage" 
+spec:
+  storageClassDevices:
+    - storageClassName: "mtr-postgresql"
+      volumeMode: Filesystem
+      fsType: xfs
+      devicePaths:
+        - /dev/vdi
+---
